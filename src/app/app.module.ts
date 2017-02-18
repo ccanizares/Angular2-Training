@@ -4,7 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
+// Modules:
+import { CatalogModule } from './catalog/catalog.module';
+import { SharedModule } from './shared/shared.module';
+
 import { AppComponent } from './app.component';
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    CatalogModule, 
+    SharedModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

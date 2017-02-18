@@ -1,0 +1,48 @@
+ @import '../../variables';
+
+.app-catalog-product {   
+    &-thumbnail {
+        max-width: 370px;
+        width: 100%;
+    }
+
+    &-button {
+        background-color: $color-secondary;
+        border: 0;
+        color: $color-foreground-brighter;
+        cursor: pointer;
+        font-size: $font-size-m;
+        height: 3rem;
+        margin-top: 1rem;
+        transition: all $animation-speed-default;
+        width: 80%;
+
+        &.is-disabled {
+            opacity: .5;
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color: $color-secondary-darker;
+            transition: all $animation-speed-default;
+        }
+    }
+
+    &-name {
+        font-size: $font-size-m;
+        font-weight: $font-weight-semilight;
+        margin-top: .5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-price {
+        font-size: 28px;
+        font-weight: 900;
+        text-align: center;
+
+        &::before {
+            content: '$';
+        }
+    }
+}

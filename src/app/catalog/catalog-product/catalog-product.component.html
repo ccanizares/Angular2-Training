@@ -1,0 +1,11 @@
+<img class="app-catalog-product-thumbnail" src="{{item.pictureUri}}" />
+<button [ngClass]="{'app-catalog-product-button': true, 'is-disabled': !authenticated}" (click)="addToCart(item)">
+                    [ ADD TO CART ]
+</button>
+
+<div class="app-catalog-product-name">
+  <span>{{item.name}}</span>
+</div>
+<div class="app-catalog-product-price">
+  <span>{{item.price}}</span>
+</div>

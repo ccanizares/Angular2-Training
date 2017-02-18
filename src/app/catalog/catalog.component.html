@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngIf="catalog?.data.length > 0">
+        <!--<esh-pager [model]="paginationInfo" (changed)="onPageChanged($event)"></esh-pager>-->
+
+        <div class="app-catalog-items row">
+            <div class="app-catalog-item col-md-4"
+                 *ngFor="let item of catalog?.data">
+               <app-catalog-product [item]="item" (onAddToBasket)="onAddToBasket()"></app-catalog-product>
+            </div>
+        </div>
+<!--
+        <esh-pager [model]="paginationInfo" (changed)="onPageChanged($event)"></esh-pager>-->
+    </div>
+    <div *ngIf="catalog?.data.length == 0">
+        <span>THERE ARE NO RESULTS THAT MATCH YOUR SEARCH</span>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+@import './variables';
+
+.app {
+    &-menu-button {
+        background-color: $color-secondary;
+        border: 0;
+        color: $color-foreground-brighter;
+        cursor: pointer;
+        font-size: $font-size-m;
+        height: 3rem;
+        margin-top: 1rem;
+        transition: all $animation-speed-default;
+        width: 16rem;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $color-secondary-darker;
+            transition: all $animation-speed-default;
+        } 
+    }
+}
