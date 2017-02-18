@@ -9,7 +9,6 @@ import { CatalogModule } from './catalog/catalog.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
     HttpModule,
     AppRoutingModule, 
     CatalogModule, 
-    SharedModule 
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
