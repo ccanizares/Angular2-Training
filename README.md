@@ -11,3 +11,5 @@ npm install -g @angular-cli@latest
 npm install
 <br>
 ng serve
+<br>
+open your browser and navigate to <a href='http://localhost:4200'>localhost:4200</a>
