@@ -11,7 +11,7 @@ import { DataService } from '../shared/services/data.service';
 export class CatalogComponent implements OnInit {
   catalog: ICatalog;
   constructor(private service: CatalogService) {
-    this.getCatalog();
+    //this.getCatalog();
   }
 
   ngOnInit() {
@@ -20,20 +20,4 @@ export class CatalogComponent implements OnInit {
   onAddToBasket() {
     console.log('Hola que ase');
   }
-
-  getCatalog() {
-    this.service.getCatalog().subscribe(catalog => {
-      this.catalog = catalog;
-
-      // this.paginationInfo = {
-      //     actualPage : catalog.pageIndex,
-      //     itemsPage : catalog.pageSize,
-      //     totalItems : catalog.count,
-      //     totalPages: Math.ceil(catalog.count / catalog.pageSize),
-      //     items: catalog.pageSize
-      // };
-
-    });
-  }
-
 }

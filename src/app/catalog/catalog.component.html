@@ -1,15 +1,20 @@
 <div class="container">
     <div *ngIf="catalog?.data.length > 0">
-        <!--<esh-pager [model]="paginationInfo" (changed)="onPageChanged($event)"></esh-pager>-->
-
         <div class="app-catalog-items row">
-            <div class="app-catalog-item col-md-4"
-                 *ngFor="let item of catalog?.data">
-               <app-catalog-product [item]="item" (onAddToBasket)="onAddToBasket()"></app-catalog-product>
+            <div class="app-catalog-item col-md-4" *ngFor="let item of catalog?.data">
+                <img class="app-catalog-item-thumbnail" src="{{item.pictureUri}}" />
+                <button class="app-catalog-item-button">
+                                [ ADD TO CART ]
+                </button>
+
+                <div class="app-catalog-item-name">
+                    <span>{{item.name}}</span>
+                </div>
+                <div class="app-catalog-item-price">
+                    <span>{{item.price}}</span>
+                </div>
             </div>
         </div>
-<!--
-        <esh-pager [model]="paginationInfo" (changed)="onPageChanged($event)"></esh-pager>-->
     </div>
     <div *ngIf="catalog?.data.length == 0">
         <span>THERE ARE NO RESULTS THAT MATCH YOUR SEARCH</span>
